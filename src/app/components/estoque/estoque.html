@@ -1,0 +1,77 @@
+<div class="estoque">
+  <div class="tabela">
+
+    <h1>Controle de Estoque</h1>
+
+    <div class="add-box">
+        <h2>Adicionar Produto</h2>
+
+        <input [(ngModel)]="novoProduto.codigo" placeholder="Código">
+        <input [(ngModel)]="novoProduto.nome" placeholder="Nome">
+        <select [(ngModel)]="novoProduto.categoria">
+            <option value="">Selecione uma categoria</option>
+            <option *ngFor="let cat of categorias" [value]="cat">
+                {{ cat }}
+            </option>x
+        </select>
+        <input [(ngModel)]="novoProduto.preco" type="number" placeholder="Preço">
+        <input [(ngModel)]="novoProduto.quantidade" type="number" placeholder="Quantidade">
+
+        <button class="btn-adicionar" (click)="adicionarProduto()">
+            Adicionar
+        </button>
+    </div>
+
+    <table>
+      <thead>
+        <tr class="topico">
+          <th>Código do Produto</th>
+          <th>Nome do Produto</th>
+          <th>Categoria</th>
+          <th>Preço</th>
+          <th>Quantidade</th>
+          <th>Imagem</th>
+          <th>Descrição</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let produto of produtos">
+          <td>{{ produto.codigo }}</td>
+          <td>{{ produto.nome }}</td>
+          <td>{{ produto.categoria }}</td>
+          <td>{{ produto.preco }}</td>
+          <td>{{ produto.quantidade }}</td>
+          <td>-</td>
+          <td>-</td>
+          <td class="acoes">
+            <button class="btn-editar" (click)="editarProduto(produto)">
+                Editar
+            </button>
+            <button class="btn-excluir" (click)="excluirProduto(produto.id)">
+                Excluir
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div *ngIf="produtoEditando as pE" class="edit-box">
+        <h2>Editar Produto</h2>
+
+        <input [(ngModel)]="pE.nome" placeholder="Nome">
+        <select [(ngModel)]="pE.categoria">
+            <option *ngFor="let cat of categorias" [value]="cat">
+                {{ cat }}
+            </option>
+        </select>
+        <input [(ngModel)]="pE.preco" type="number" placeholder="Preço">
+        <input [(ngModel)]="pE.quantidade" type="number" placeholder="Quantidade">
+
+        <button (click)="salvarEdicao()">Salvar</button>
+        <button (click)="cancelarEdicao()">Cancelar</button>
+    </div>
+
+  </div>
+</div>

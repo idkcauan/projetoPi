@@ -1,0 +1,39 @@
+<header>
+  <a routerLink="/" >
+    <img class="nome-loja" src="icons/logo.jpg" alt="logo">
+  </a>
+  <input type="text" class="input-redondo" placeholder="Buscar produtos...">
+<div class="icones">
+@if (!usuarioService.isLogado()) {
+  <div>
+    <img src="icons/profile-svgrepo-com.svg" alt="Login">
+    <a routerLink="/login">Entrar/Registrar</a>
+  </div>
+} @else {
+  <div>
+    <img src="icons/profile-svgrepo-com.svg" alt="Usuário">
+    <span>Bem-vindo, {{ usuarioService.getUsuarioLogado()?.nome }}</span>
+  </div>
+}
+  <img src="icons/cart-svgrepo-com.svg" alt="Carrinho">
+  <a routerLink="/carrinho">Carrinho</a>
+</div>
+</header>
+
+<nav class="menu">
+  <a routerLink="/corrida">Corrida</a>
+  <a routerLink="/suplementos">Suplementos</a>
+  <a routerLink="/basquete">Basquete</a>
+  <a routerLink="/volei">Vôlei</a>
+  <a routerLink="/calcados">Calçados</a>
+  <a routerLink="/roupas">Roupas</a>
+  <a routerLink="/ofertas">Ofertas</a>
+
+  @if (usuarioService.isAdmin()) {
+    <a routerLink="/estoque">Estoque</a>
+  }
+</nav>
+
+<div class="banner">
+  <img [src]="bannerImagem" alt="Banner">
+</div>

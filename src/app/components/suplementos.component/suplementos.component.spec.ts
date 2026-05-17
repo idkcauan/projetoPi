@@ -1,0 +1,22 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { SuplementosComponent } from './suplementos.component';
+
+describe('SuplementosComponent', () => {
+  let component: SuplementosComponent;
+  let fixture: ComponentFixture<SuplementosComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [SuplementosComponent],
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(SuplementosComponent);
+    component = fixture.componentInstance;
+    await fixture.whenStable();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

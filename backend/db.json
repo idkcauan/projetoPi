@@ -1,0 +1,66 @@
+{
+  "produtos": [
+    {
+      "codigo": "1",
+      "nome": "Air Force",
+      "categoria": "Tênis",
+      "preco": 759.9,
+      "quantidade": 100,
+      "imagem": "images/airforce1.jpg",
+      "id": "OQjJ-2qpRj0"
+    },
+    {
+      "codigo": "2",
+      "nome": "Air Max",
+      "categoria": "Tênis",
+      "preco": 759.9,
+      "quantidade": 100,
+      "imagem": "images/airmax.jpg",
+      "id": "7RImsYFT8Qg"
+    },
+    {
+      "codigo": "3",
+      "nome": "Asd",
+      "categoria": "Tênis",
+      "preco": 343,
+      "quantidade": 22,
+      "imagem": "images/asd.jpg",
+      "id": "dAO4fqaDREg"
+    },
+    {
+      "codigo": "4",
+      "nome": "Camisa da Seleção Brasileira",
+      "categoria": "Camisa",
+      "preco": 350,
+      "quantidade": 10,
+      "imagem": "images/camisa-brasil.png",
+      "id": "ZKoV_NdT9K8"
+    },
+    {
+      "codigo": "5",
+      "nome": "Camisa Dry Fit McLaren",
+      "categoria": "Camisa",
+      "preco": 300,
+      "quantidade": 10,
+      "imagem": "images/camisadryfit.jpg",
+      "id": "XF6RffZubbU"
+    }
+  ],
+  "usuarios": [
+    {
+      "nome": "admin",
+      "email": "admin@gmail.com",
+      "senha": "1234",
+      "cargo": "admin",
+      "id": "Oo21WNmJf-I"
+    },
+    {
+      "nome": "Hugo",
+      "email": "hugo@gmail.com",
+      "senha": "9999",
+      "cargo": "admin",
+      "id": "b3AWwUeHtzM"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
