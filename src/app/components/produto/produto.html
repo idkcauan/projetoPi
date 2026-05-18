@@ -1,0 +1,76 @@
+<main>
+    <div class="produto">
+        <div class="informacoes-produto">
+            <div class="nota">
+                <h1>4.72</h1>
+                <div class="area-estrelas">
+                    <div class="estrelas">★★★★★</div>
+                    <span>1000 avaliações</span>
+                </div>
+            </div>
+            <div class="detalhes">
+                <p><strong>Marca:</strong> Marca</p>
+                <p><strong>Indicado para:</strong> Treinar</p>
+                <p><strong>Material:</strong> Têxtil e Sintético</p>
+                <p><strong>Peso do Produto:</strong> 352g</p>
+                <p><strong>Definição da Tecnologia:</strong> Espuma macia que amortece o impacto.</p>
+                <p><strong>Garantia do Fabricante:</strong> Contra defeito de fabricação</p>
+                <p><strong>Descrição:</strong> O Mizuno Wave Pro é um tênis desenvolvido para
+                    oferecer conforto, estabilidade e alto desempenho dentro das quadras. Com
+                    design moderno e solado antiderrapante, proporciona maior segurança nos movimentos
+                    rápidos, saltos e mudanças de direção durante as partidas. Seu material leve e respirável
+                    garante mais conforto mesmo em jogos intensos.</p>
+            </div>
+        </div>
+        <div class="fotos">
+            <div class="miniaturas" *ngIf="produto">
+                <img [src]="produto.imagem">
+                <img [src]="produto.imagem">
+                <img [src]="produto.imagem">
+                <img [src]="produto.imagem">
+            </div>
+            <div class="imagem-principal" *ngIf="produto">
+                <img [src]="produto.imagem">
+            </div>
+        </div>
+
+        <div class="compra" *ngIf="produto">
+            <h1>{{produto.nome}}</h1>
+            <p class="cod">{{produto.id}}</p>
+
+            <div class="cores">
+                <h3>Cor: <span>Chumbo</span></h3>
+                <div class="lista-cores">
+                    <div class="cor"></div>
+                    <div class="cor azul"></div>
+                    <div class="cor cinza"></div>
+                    <div class="cor preta"></div>
+                    <div class="cor azul2"></div>
+                </div>
+            </div>
+
+            <div class="tamanhos">
+                <h3>Tamanho:</h3>
+                <div class="lista-tamanhos">
+                    <button>38</button>
+                    <button>39</button>
+                    <button>40</button>
+                    <button>41</button>
+                    <button>42</button>
+                    <button>43</button>
+                    <button>44</button>
+                    <button>45</button>
+                </div>
+            </div>
+
+            <div class="preco" *ngIf="produto">
+                <h2>{{ produto.preco | currency:'BRL':'symbol':'1.2-2'}} <span>no Pix</span></h2>
+                <p>ou R$ 179,99 em até 3x sem juros</p>
+                <button class="comprar">COMPRAR</button>
+                <button class="carrinho" (click)="adicionarAoCarrinho(produto)">Adicionar ao Carrinho</button>
+            </div>
+
+        </div>
+
+    </div>
+</main>

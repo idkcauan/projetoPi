@@ -62,5 +62,20 @@
       "id": "b3AWwUeHtzM"
     }
   ],
+  "carrinho": [
+    {
+      "produto": {
+        "codigo": "1",
+        "nome": "Air Force",
+        "categoria": "Tênis",
+        "preco": 759.9,
+        "quantidade": 100,
+        "imagem": "images/airforce1.jpg",
+        "id": "OQjJ-2qpRj0"
+      },
+      "quantidade": 2,
+      "id": "WtQBi-Gp8Y0"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

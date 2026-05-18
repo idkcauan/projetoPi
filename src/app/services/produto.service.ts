@@ -16,7 +16,7 @@ export class ProdutoService {
     return this.http.get<Produto[]>(this.API);
   }
 
-  buscarPorId(codigo: number):Observable<Produto|undefined>{
+  buscarPorId(codigo: number|string):Observable<Produto|undefined>{
     return this.http.get<Produto>(this.API + `/${codigo}`)
   }
 

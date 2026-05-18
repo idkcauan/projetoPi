@@ -17,7 +17,7 @@
     <p><b>{{ produto.preco | currency:'BRL':'symbol':'1.2-2'}}</b></p>
   </div>
 
-  <button (click)="adicionarAoCarrinho(produto)">
+  <button [routerLink]="['/produto', produto.id]">
     Comprar
   </button>
 </div>

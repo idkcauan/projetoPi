@@ -1,6 +1,7 @@
 import { Produto } from "./produto.model";
 
 export interface CarrinhoItem{
-    produto:Produto
+    id?:string,
+    produto:Produto,
     quantidade:number
 }

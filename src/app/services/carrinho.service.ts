@@ -4,7 +4,6 @@ import {Observable} from 'rxjs';
 import { CarrinhoItem } from '../models/carrinho.model';
 import { ProdutoService } from './produto.service';
 import { Produto } from '../models/produto.model';
-import { count } from 'console';
 
 @Injectable({
   providedIn: 'root',
@@ -13,23 +12,40 @@ import { count } from 'console';
 export class CarrinhoService {
 
     private carrinho :CarrinhoItem[] = []
+    private API = "http://localhost:3000/carrinho"
+
+  constructor(private http:HttpClient){}
 
     adicionarProduto(produto:Produto){
       
-      const item = this.carrinho.find(prod => prod.produto.id === produto.id);
+      this.http.get<CarrinhoItem[]>(this.API)
+        .subscribe(carrinho => {
+          const itemExistente = carrinho.find(
+            item => item.produto.id == produto.id
+          );
 
-      if(item){
-        item.quantidade++;
-        console.log("Quantidade de itens aumentada")
+          if (itemExistente){
+            itemExistente.quantidade++;
 
-      }else{
-        this.carrinho.push({produto:produto, quantidade:1});
-        console.log("Produto adicionado")
-      }
-    }
+            this.http.put(
+              `${this.API}/${itemExistente.id}`,
+              itemExistente
+            ).subscribe();
+          }else{
+            const novoItem: CarrinhoItem = {
+              produto: produto,
+              quantidade: 1
+            }
 
-    listar():CarrinhoItem[]{
-      return this.carrinho;
+            this.http.post<CarrinhoItem>(this.API, novoItem).subscribe();
+          };
+        }
+          
+        )}
+      
+
+    listar():Observable<CarrinhoItem[]>{
+      return this.http.get<CarrinhoItem[]>(this.API);
     }
 
     calcularPreco(carrinho:CarrinhoItem[]):number{

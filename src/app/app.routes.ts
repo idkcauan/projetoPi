@@ -10,10 +10,17 @@ import { VoleiComponent } from './components/volei.component/volei.component';
 import { CalcadosComponent } from './components/calcados.component/calcados.component';
 import { OfertasComponet } from './components/ofertas.componet/ofertas.componet';
 import { RoupasComponent } from './components/roupas.component/roupas.component';
+import { ProdutoPage } from './components/produto/produto';
+import { CarrinhoPage } from './components/carrinho-page/carrinho-page';
 
 export const routes: Routes = [
     {
         path:'',
+        component: HomeComponent,
+        title: 'Home'
+    },
+    {
+        path:'home',
         component: HomeComponent,
         title: 'Home'
     },
@@ -66,5 +73,15 @@ export const routes: Routes = [
         path: 'roupas',
         component: RoupasComponent,
         title: 'Roupas'
+    },
+    {
+        path: 'produto/:id',
+        component: ProdutoPage,
+        title: 'Produto'
+    },
+    {
+        path:'carrinho',
+        component:CarrinhoPage,
+        title: 'Carrinho'
     }
 ];
