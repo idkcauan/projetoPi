@@ -2,13 +2,13 @@
     <div class="carrinho">
         <div class="meu-carrinho">
             <h2>Meu carrinho</h2>
-            <div class="caixa-carrinho">
+            <div class="caixa-carrinho" *ngFor="let produto of carrinho">
                 <div class="produto">
                     <div class="produto-esquerda">
-                        <img src="image/Fila Kr7 Pro Speed.jpg" alt="Tênis">
+                        <img [src]="produto.produto.imagem" alt="Tênis">
                         <div>
-                            <h3>Tênis</h3>
-                            <p class="cod">Ref: #213-1637-988-41</p>
+                            <h3>{{produto.produto.nome}}</h3>
+                            <p class="cod">Ref: {{produto.produto.id}}</p>
                             <p>Vendido e entregue por <b>Brothers Imports</b></p>
                             <p>Tamanho: 40</p>
                             <p>Cor: Branco/Azul</p>
@@ -19,11 +19,11 @@
                     <div class="quantidade">
                         <span>Quantidade:</span>
                         <button>-</button>
-                        <input type="text" value="1">
+                        <input type="text" [value]="produto.quantidade">
                         <button>+</button>
                     </div>
                     <div class="preco">
-                        <p>R$ 599,99</p>
+                        <p>{{ produto.produto.preco | currency:'BRL':'symbol':'1.2-2'}}</p>
                     </div>
                 </div>
             </div>
@@ -39,8 +39,8 @@
             <h2>Resumo da compra</h2>
             <div class="resumo">
                 <div class="linha-resumo">
-                    <span>Subtotal (1 item)</span>
-                    <strong>R$ 599,99</strong>
+                    <span>Subtotal ({{carrinho.length}})</span>
+                    <strong>{{ total | currency:'BRL':'symbol':'1.2-2'}}</strong>
                 </div>
                 <div class="linha-resumo">
                     <span>Frete</span>
@@ -53,9 +53,9 @@
                 <hr>
                 <div class="linha-resumo" style="margin-top:20px">
                     <p>Valor total</p>
-                    <p><strong>R$ 599,99</strong></p>
+                    <p><strong>{{ total | currency:'BRL':'symbol':'1.2-2'}}</strong></p>
                 </div>
-                <button class="finalizar">Finalizar Compra</button>
+                <button class="finalizar" routerLink="/finalizado">Finalizar Compra</button>
             </div>
         </div>
     </div>

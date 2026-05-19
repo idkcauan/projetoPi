@@ -12,6 +12,7 @@ import { OfertasComponet } from './components/ofertas.componet/ofertas.componet'
 import { RoupasComponent } from './components/roupas.component/roupas.component';
 import { ProdutoPage } from './components/produto/produto';
 import { CarrinhoPage } from './components/carrinho-page/carrinho-page';
+import { CompraFinalizada } from './components/compra-finalizada/compra-finalizada';
 
 export const routes: Routes = [
     {
@@ -81,7 +82,12 @@ export const routes: Routes = [
     },
     {
         path:'carrinho',
-        component:CarrinhoPage,
+        component: CarrinhoPage,
         title: 'Carrinho'
+    },
+    {
+        path:'finalizado',
+        component: CompraFinalizada,
+        title: 'Obrigado pela compra!'
     }
 ];

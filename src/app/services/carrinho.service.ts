@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import {map, Observable} from 'rxjs';
 import { CarrinhoItem } from '../models/carrinho.model';
 import { ProdutoService } from './produto.service';
 import { Produto } from '../models/produto.model';
@@ -10,8 +10,6 @@ import { Produto } from '../models/produto.model';
 })
 
 export class CarrinhoService {
-
-    private carrinho :CarrinhoItem[] = []
     private API = "http://localhost:3000/carrinho"
 
   constructor(private http:HttpClient){}
@@ -43,18 +41,7 @@ export class CarrinhoService {
           
         )}
       
-
     listar():Observable<CarrinhoItem[]>{
       return this.http.get<CarrinhoItem[]>(this.API);
-    }
-
-    calcularPreco(carrinho:CarrinhoItem[]):number{
-      let total:number = 0;
-      for(let i:number = 0;i<carrinho.length;i++){
-        let preco = (carrinho[i].produto.preco * carrinho[i].quantidade)
-        total += preco;
-      }
-
-      return total;
     }
 }

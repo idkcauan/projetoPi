@@ -1,0 +1,69 @@
+<main>
+    <div class="carrinho">
+        <div class="meu-carrinho">
+            <h2 class="cod">Pedido #3657</h2>
+            <div class="caixa-carrinho">
+                <div class="centro">
+                    <h3>Obrigado, Nome</h3>
+                    <img src="images/compra-finalizada.png" alt="">
+                    <h2 style="margin-top: 15px;">Seu pedido foi confirmado.</h2>
+                </div>
+                <div class="linha"></div>
+                <h4>Detalhes do produto</h4>
+                <div class="produto" *ngFor="let produto of carrinho">
+                    <div class="produto-esquerda">
+                        <img [src]="produto.produto.imagem" alt="">
+                        <div>
+                            <h3>{{produto.produto.nome}}</h3>
+                            <p class="cod">Ref: {{produto.produto.id}}</p>
+                            <p>Vendido e entregue por <b>Brothers Imports</b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="linha"></div>
+                <div class="linha-resumo">
+                    <p>Subtotal</p>
+                    <p>{{carrinho.length}} Item(s)</p>
+                    <p>{{ total | currency:'BRL':'symbol':'1.2-2'}}</p>
+                </div>
+                <div class="linha-resumo">
+                    <p>Desconto</p>
+                    <p></p>
+                    <p>R$ 0,00</p>
+                </div>
+                <div class="linha-resumo">
+                    <p>Envio</p>
+                    <p></p>
+                    <p>R$ 0,00</p>
+                </div>
+                <div class="linha-resumo">
+                    <p><b>Total</b></p>
+                    <p></p>
+                    <p><b>{{ total | currency:'BRL':'symbol':'1.2-2'}}</b></p>
+                </div>
+                <div class="linha"></div>
+                <h4 style="margin: 10px;">Informações do cliente</h4>
+                <div class="informacoes-cliente">
+                    <h4>Endereço de Email</h4>
+                    <p>teste123@gmail.com</p>
+                </div>
+                <div class="informacoes-cliente">
+                    <h4>Endereço de Envio</h4>
+                    <p>Nome Completo</p>
+                    <p>Rua Maria Amélia, N 325</p>
+                    <p>São Paulo, SP</p>
+                    <p>Brasil - 04567-890</p>
+                </div>
+                <div class="informacoes-cliente">
+                    <p>Método de Pagamento</p>
+                    <div class="metodo-pagamento">
+                        <div class="metodo">
+                            <img src="images/pix.png" alt="" style="width: 50px;">
+                        </div>
+                        <p class="cod">PIX - {{ total | currency:'BRL':'symbol':'1.2-2'}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

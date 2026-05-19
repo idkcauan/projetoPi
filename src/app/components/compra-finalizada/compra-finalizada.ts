@@ -1,20 +1,20 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
 import { CarrinhoService } from '../../services/carrinho.service';
 import { CarrinhoItem } from '../../models/carrinho.model';
 
 @Component({
-  selector: 'app-carrinho-page',
-  imports: [CommonModule, RouterModule],
-  templateUrl: './carrinho-page.html',
-  styleUrl: './carrinho-page.css',
+  selector: 'app-compra-finalizada',
+  imports: [CommonModule],
+  templateUrl: './compra-finalizada.html',
+  styleUrl: './compra-finalizada.css',
 })
-export class CarrinhoPage {
+export class CompraFinalizada {
+
+  constructor(private carrinhoService:CarrinhoService){}
 
   carrinho:CarrinhoItem[] = [];
   total = 0;
-  constructor(private router:Router, private carrinhoService:CarrinhoService,){}
 
   ngOnInit(){
     this.carrinhoService.listar().subscribe(dados => {
@@ -23,6 +23,6 @@ export class CarrinhoPage {
     this.total = this.carrinho.reduce((acc, item) =>
       acc + item.produto.preco * item.quantidade, 0
     );
-    });
+    })
   }
 }

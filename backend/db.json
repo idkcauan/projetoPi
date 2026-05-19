@@ -65,16 +65,29 @@
   "carrinho": [
     {
       "produto": {
-        "codigo": "1",
-        "nome": "Air Force",
-        "categoria": "Tênis",
-        "preco": 759.9,
-        "quantidade": 100,
-        "imagem": "images/airforce1.jpg",
-        "id": "OQjJ-2qpRj0"
+        "codigo": "4",
+        "nome": "Camisa da Seleção Brasileira",
+        "categoria": "Camisa",
+        "preco": 350,
+        "quantidade": 10,
+        "imagem": "images/camisa-brasil.png",
+        "id": "ZKoV_NdT9K8"
       },
       "quantidade": 2,
-      "id": "WtQBi-Gp8Y0"
+      "id": "dDjPfwqwOvY"
+    },
+    {
+      "produto": {
+        "codigo": "5",
+        "nome": "Camisa Dry Fit McLaren",
+        "categoria": "Camisa",
+        "preco": 300,
+        "quantidade": 10,
+        "imagem": "images/camisadryfit.jpg",
+        "id": "XF6RffZubbU"
+      },
+      "quantidade": 1,
+      "id": "FZ3sh_6XsfM"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
