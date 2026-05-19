@@ -5,12 +5,12 @@
   <input type="text" class="input-redondo" placeholder="Buscar produtos...">
 <div class="icones">
 @if (!usuarioService.isLogado()) {
-  <div>
+  <div class="icones">
     <img src="icons/profile-svgrepo-com.svg" alt="Login">
     <a routerLink="/login">Entrar/Registrar</a>
   </div>
 } @else {
-  <div>
+  <div class="'icones">
     <img src="icons/profile-svgrepo-com.svg" alt="Usuário">
     <span>Bem-vindo, {{ usuarioService.getUsuarioLogado()?.nome }}</span>
   </div>
@@ -34,6 +34,6 @@
   }
 </nav>
 
-<div class="banner">
+<div class="banner" *ngIf="mostrarBanner">
   <img [src]="bannerImagem" alt="Banner">
 </div>

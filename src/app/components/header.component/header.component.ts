@@ -15,6 +15,9 @@ export class HeaderComponent {
 
   bannerImagem = 'images/banner-home.jpg';
 
+  mostrarBanner = true;
+  rotaSemBanner = ['produto/:id', '/carrinho'];
+
   constructor(public usuarioService: UsuarioService, private router: Router) {
 
     this.router.events
@@ -23,7 +26,15 @@ export class HeaderComponent {
 
         const rota = event.urlAfterRedirects;
 
-        if (rota.includes('volei')) {
+        if (this.rotaSemBanner.includes('produto/:id')) {
+          this.mostrarBanner = false;
+        }
+
+        else if (this.rotaSemBanner.includes('/carrinho')) {
+          this.mostrarBanner = false;
+        }
+
+        else if (rota.includes('volei')) {
           this.bannerImagem = 'images/banner-volei.png';
         }
 
