@@ -14,9 +14,8 @@ import { filter } from 'rxjs/operators';
 export class HeaderComponent {
 
   bannerImagem = 'images/banner-home.jpg';
-
   mostrarBanner = true;
-  rotaSemBanner = ['produto/:id', '/carrinho'];
+  
 
   constructor(public usuarioService: UsuarioService, private router: Router) {
 
@@ -26,11 +25,13 @@ export class HeaderComponent {
 
         const rota = event.urlAfterRedirects;
 
-        if (this.rotaSemBanner.includes('produto/:id')) {
+        this.mostrarBanner = true;
+
+        if (rota.includes('/produto')) {
           this.mostrarBanner = false;
         }
 
-        else if (this.rotaSemBanner.includes('/carrinho')) {
+        else if (rota.includes('/carrinho')) {
           this.mostrarBanner = false;
         }
 
