@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Usuario } from '../models/usuario.model';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -11,6 +13,9 @@ export class UsuarioService {
   ]
 
   usuarioLogado:Usuario | null = null;
+  private API = "http://localhost:3000/usuarios";
+
+  constructor(private http:HttpClient){}
 
   validarLogin(usuario:Usuario): boolean{
     const usuarioE = this.usuarios.find(u => u.email === usuario.email && u.senha === usuario.senha);
@@ -38,22 +43,12 @@ export class UsuarioService {
     return !!this.getUsuarioLogado();
   }
 
-  cadastrarUsuario(usuario:Usuario, senha1:string, senha2:string): boolean{
-    const usuarioE = this.usuarios.find(u => u.email === usuario.email)
+  cadastrarUsuario(usuario:Usuario): Observable<Usuario>{
+    return this.http.post<Usuario>(this.API, usuario);
+  }
 
-    if(usuarioE){
-      alert("email já cadastrado")
-      return false;
-    }
-    if(senha1 != senha2){
-      alert("As senhas não são iguais")
-      return false;
-    }
-
-    usuario.cargo = 'user';
-
-    this.usuarios.push(usuario);
-    return true
+  listar():Observable<Usuario[]>{
+    return this.http.get<Usuario[]>(this.API);
   }
 
   isAdmin(): boolean {

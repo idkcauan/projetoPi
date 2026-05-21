@@ -17,24 +17,37 @@ export class CadastrarUsuarioComponent {
   senha2: string = '';
 
   cadastroDeUsuario(){
-    const usuario = {
-      nome: this.nome,
-      email: this.email,
-      senha: this.senha
-    }
-
-    if(!this.nome.trim()||!this.email.trim()||!this.senha.trim()){
-      alert("Preencha todos os campos!")
+    if(this.senha != this.senha2){
+      alert("As senhas não são iguais.")
       return;
     }
+    
+    this.usuarioSe.listar()
+      .subscribe(usuarios => {
+        const emailExistente = usuarios.find(
+          u => u.email == this.email
+        );
 
-    const sucesso:boolean = this.usuarioSe.cadastrarUsuario(usuario, this.senha, this.senha2);
+        if(emailExistente){
+          alert("email já cadastrado");
+          return
+        }
 
-    if(sucesso){
-      alert("Usuario cadastrado com sucesso!")
-      this.router.navigate(['/login'])
-    }else{
-      alert("Erro ao cadastrar usuário...")
-    }
+        const novoUsuario = {
+          nome: this.nome,
+          email: this.email,
+          senha: this.senha,
+        };
+
+        this.usuarioSe.cadastrarUsuario(novoUsuario)
+          .subscribe(() => {});
+
+        this.nome = "";
+        this.email = "";
+        this.senha = "";
+        this.senha2 = "";
+
+        this.router.navigate(['/login'])
+      });
   }
 }

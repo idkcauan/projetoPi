@@ -16,25 +16,17 @@ export class LoginComponent {
   senha:string = ''
 
   realizarLogin(){
-    const usuario = {
-      nome:"",
-      email:this.email,
-      senha:this.senha
-    }
+    this.usuarioSe.listar()
+      .subscribe(usuarios => {
+        const login = usuarios.find(
+          u => u.email == this.email && u.senha == this.senha
+        );
 
-    if(!this.email.trim()||!this.senha.trim()){
-      alert("Preencha todos os campos!")
-      return;
-    }
-
-    const sucesso = this.usuarioSe.validarLogin(usuario);
-
-    if(sucesso){
-      alert("Bem vindo!");
-      this.router.navigate(['/'])
-    }else{
-      alert("Usuario não encontrado")
-    }
+        if(login){
+          alert("Bem-vindo!")
+          this.router.navigate(['/home'])
+        }
+      })
 
   }
 }

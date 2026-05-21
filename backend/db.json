@@ -60,6 +60,18 @@
       "senha": "9999",
       "cargo": "admin",
       "id": "b3AWwUeHtzM"
+    },
+    {
+      "nome": "Gabriel ",
+      "email": "gabriel@gmail.com",
+      "senha": "1234",
+      "id": "1MtNmd-a5GM"
+    },
+    {
+      "nome": "",
+      "email": "",
+      "senha": "",
+      "id": "eSUGoTHyMUA"
     }
   ],
   "carrinho": [
