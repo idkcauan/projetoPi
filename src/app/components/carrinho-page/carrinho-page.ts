@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { CarrinhoService } from '../../services/carrinho.service';
 import { CarrinhoItem } from '../../models/carrinho.model';
@@ -14,15 +14,26 @@ export class CarrinhoPage {
 
   carrinho:CarrinhoItem[] = [];
   total = 0;
-  constructor(private router:Router, private carrinhoService:CarrinhoService,){}
+  constructor(private router:Router, private carrinhoService:CarrinhoService, private cd: ChangeDetectorRef){}
 
   ngOnInit(){
     this.carrinhoService.listar().subscribe(dados => {
       this.carrinho = dados;
+      
 
-    this.total = this.carrinho.reduce((acc, item) =>
-      acc + item.produto.preco * item.quantidade, 0
-    );
+      this.total = this.carrinho.reduce((acc, item) =>
+        acc + item.produto.preco * item.quantidade, 0
+      );
+
+      this.cd.detectChanges();
     });
+  }
+
+  checarCarrinho(){
+    if(this.carrinho.length <= 0){
+      alert("O carrinho está vazio!")
+    }else{
+      this.router.navigate(['/finalizado'])
+    }
   }
 }

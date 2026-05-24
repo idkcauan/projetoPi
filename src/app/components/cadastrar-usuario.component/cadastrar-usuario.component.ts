@@ -36,7 +36,7 @@ export class CadastrarUsuarioComponent {
         const novoUsuario = {
           nome: this.nome,
           email: this.email,
-          senha: this.senha,
+          senha: this.senha
         };
 
         this.usuarioSe.cadastrarUsuario(novoUsuario)

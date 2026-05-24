@@ -55,7 +55,7 @@
                     <p>Valor total</p>
                     <p><strong>{{ total | currency:'BRL':'symbol':'1.2-2'}}</strong></p>
                 </div>
-                <button class="finalizar" routerLink="/finalizado">Finalizar Compra</button>
+                <button class="finalizar" (click)="checarCarrinho()">Finalizar Compra</button>
             </div>
         </div>
     </div>

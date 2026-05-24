@@ -66,7 +66,12 @@
             <div class="preco" *ngIf="produto">
                 <h2>{{ produto.preco | currency:'BRL':'symbol':'1.2-2'}} <span>no Pix</span></h2>
                 <p>ou R$ 179,99 em até 3x sem juros</p>
-                <button class="comprar">COMPRAR</button>
+                @if (!usuarioService.getUsuarioLogado()){
+                    <button class="comprar" routerLink="/login">COMPRAR</button>
+                }@else{
+                    <button class="comprar" (click)="comprar(produto)">COMPRAR</button>
+                }
+                
                 <button class="carrinho" (click)="adicionarAoCarrinho(produto)">Adicionar ao Carrinho</button>
             </div>
 

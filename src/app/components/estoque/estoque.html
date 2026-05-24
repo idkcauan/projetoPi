@@ -16,6 +16,7 @@
         </select>
         <input [(ngModel)]="novoProduto.preco" type="number" placeholder="Preço">
         <input [(ngModel)]="novoProduto.quantidade" type="number" placeholder="Quantidade">
+        <input [(ngModel)]="novoProduto.imagem" placeholder="Nome do arquivo da imagem">
 
         <button class="btn-adicionar" (click)="adicionarProduto()">
             Adicionar
@@ -41,9 +42,9 @@
           <td>{{ produto.codigo }}</td>
           <td>{{ produto.nome }}</td>
           <td>{{ produto.categoria }}</td>
-          <td>{{ produto.preco }}</td>
+          <td>{{ produto.preco | currency:'BRL':'symbol':'1.2-2'}}</td>
           <td>{{ produto.quantidade }}</td>
-          <td>-</td>
+          <td><img [src]="produto.imagem" width="80"></td>
           <td>-</td>
           <td class="acoes">
             <button class="btn-editar" (click)="editarProduto(produto)">

@@ -1,6 +1,6 @@
 <header>
   <a routerLink="/home" >
-    <img class="nome-loja" src="icons/logo.jpg" alt="logo">
+    <img class="nome-loja" src="images/logo.jpg" alt="logo">
   </a>
   <input type="text" class="input-redondo" placeholder="Buscar produtos...">
 <div class="icones">
@@ -8,15 +8,19 @@
   <div class="icones">
     <img src="icons/profile-svgrepo-com.svg" alt="Login">
     <a routerLink="/login">Entrar/Registrar</a>
+
+    <img src="icons/cart-svgrepo-com.svg" alt="Carrinho">
+    <a routerLink="/login">Carrinho</a>
   </div>
 } @else {
   <div class="'icones">
     <img src="icons/profile-svgrepo-com.svg" alt="Usuário">
     <span>Bem-vindo, {{ usuarioService.getUsuarioLogado()?.nome }}</span>
+
+    <img src="icons/cart-svgrepo-com.svg" alt="Carrinho">
+    <a routerLink="/carrinho">Carrinho</a>
   </div>
 }
-  <img src="icons/cart-svgrepo-com.svg" alt="Carrinho">
-  <a routerLink="/carrinho">Carrinho</a>
 </div>
 </header>
 

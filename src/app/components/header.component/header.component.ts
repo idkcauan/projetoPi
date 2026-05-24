@@ -34,6 +34,9 @@ export class HeaderComponent {
         else if (rota.includes('/carrinho')) {
           this.mostrarBanner = false;
         }
+        else if(rota.includes('/finalizado')){
+          this.mostrarBanner = false;
+        }
 
         else if (rota.includes('volei')) {
           this.bannerImagem = 'images/banner-volei.png';
@@ -56,7 +59,7 @@ export class HeaderComponent {
         }
 
         else {
-          this.bannerImagem = 'images/banner-home.jpg';
+          this.bannerImagem = 'images/banner-inicial.png';
         }
 
       });

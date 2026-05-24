@@ -4,7 +4,7 @@
             <h2 class="cod">Pedido #3657</h2>
             <div class="caixa-carrinho">
                 <div class="centro">
-                    <h3>Obrigado, Nome</h3>
+                    <h3>Obrigado, {{usuarioService.getUsuarioLogado()?.nome}}</h3>
                     <img src="images/compra-finalizada.png" alt="">
                     <h2 style="margin-top: 15px;">Seu pedido foi confirmado.</h2>
                 </div>
@@ -45,7 +45,7 @@
                 <h4 style="margin: 10px;">Informações do cliente</h4>
                 <div class="informacoes-cliente">
                     <h4>Endereço de Email</h4>
-                    <p>teste123@gmail.com</p>
+                    <p>{{usuarioService.getUsuarioLogado()?.email}}</p>
                 </div>
                 <div class="informacoes-cliente">
                     <h4>Endereço de Envio</h4>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { UsuarioService } from '../../services/usuario.service';
 import { FormsModule } from '@angular/forms';
 import {Router, RouterModule} from '@angular/router';
+import { log } from 'node:console';
 
 @Component({
   selector: 'app-login.component',
@@ -23,6 +24,7 @@ export class LoginComponent {
         );
 
         if(login){
+          this.usuarioSe.usuarioLogado = login;
           alert("Bem-vindo!")
           this.router.navigate(['/home'])
         }

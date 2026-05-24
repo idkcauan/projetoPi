@@ -20,7 +20,7 @@
     },
     {
       "codigo": "3",
-      "nome": "Asd",
+      "nome": "Tênis Nike",
       "categoria": "Tênis",
       "preco": 343,
       "quantidade": 22,
@@ -44,6 +44,15 @@
       "quantidade": 10,
       "imagem": "images/camisadryfit.jpg",
       "id": "XF6RffZubbU"
+    },
+    {
+      "codigo": "6",
+      "nome": "Camisa seleção brasileira 2",
+      "preco": 350,
+      "quantidade": 100,
+      "imagem": "images/Camisa brasil 2.webp",
+      "id": "UxCXMIsaP_I",
+      "categoria": "camisa"
     }
   ],
   "usuarios": [
@@ -65,42 +74,10 @@
       "nome": "Gabriel ",
       "email": "gabriel@gmail.com",
       "senha": "1234",
+      "cargo": "user",
       "id": "1MtNmd-a5GM"
-    },
-    {
-      "nome": "",
-      "email": "",
-      "senha": "",
-      "id": "eSUGoTHyMUA"
     }
   ],
-  "carrinho": [
-    {
-      "produto": {
-        "codigo": "4",
-        "nome": "Camisa da Seleção Brasileira",
-        "categoria": "Camisa",
-        "preco": 350,
-        "quantidade": 10,
-        "imagem": "images/camisa-brasil.png",
-        "id": "ZKoV_NdT9K8"
-      },
-      "quantidade": 2,
-      "id": "dDjPfwqwOvY"
-    },
-    {
-      "produto": {
-        "codigo": "5",
-        "nome": "Camisa Dry Fit McLaren",
-        "categoria": "Camisa",
-        "preco": 300,
-        "quantidade": 10,
-        "imagem": "images/camisadryfit.jpg",
-        "id": "XF6RffZubbU"
-      },
-      "quantidade": 1,
-      "id": "FZ3sh_6XsfM"
-    }
-  ],
+  "carrinho": [],
   "$schema": "./node_modules/json-server/schema.json"
 }

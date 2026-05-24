@@ -1,6 +1,6 @@
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ProdutoService } from '../../services/produto.service';
 import { Produto } from '../../models/produto.model';
 import { HttpClient } from '@angular/common/http';
@@ -21,11 +21,12 @@ export class Estoque implements OnInit {
 
   categorias = ['Tênis', 'camisa', 'Vôlei', 'Basquete', 'Suplemento', 'Acessórios'];
 
-  constructor(private produtoService: ProdutoService, private router: Router) {}
+  constructor(private produtoService: ProdutoService, private router: Router, private cd:ChangeDetectorRef) {}
 
   ngOnInit() {
     this.produtoService.listar().subscribe((data) => {
       this.produtos = data;
+      this.cd.detectChanges();
     });
   }
 
@@ -36,7 +37,7 @@ export class Estoque implements OnInit {
       categoria: '',
       preco: 0,
       quantidade: 0,
-      imagem: "",
+      imagem: "images/",
       codigo: 0
     };
   }

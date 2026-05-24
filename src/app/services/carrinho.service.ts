@@ -44,4 +44,12 @@ export class CarrinhoService {
     listar():Observable<CarrinhoItem[]>{
       return this.http.get<CarrinhoItem[]>(this.API);
     }
+
+    limparCarrinho(){
+      this.listar().subscribe(itens =>{
+        itens.forEach(item => {
+          this.http.delete(this.API + `/${item.id}`).subscribe();
+        });
+      });
+    }
 }
