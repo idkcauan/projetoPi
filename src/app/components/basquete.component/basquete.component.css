@@ -92,10 +92,49 @@ main {
     text-align: center;
 }
 
-.produtos {
+.topicos1 {
     display: flex;
+    width: 100%;
     gap: 100px;
     padding: 30px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.categoria {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border: 2px solid rgb(185, 185, 185);
+    border-radius: 10px;
+    width: 270px;
+    height: 400px;
+    text-align: center;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.categoria img {
+    width: 100%;
+    align-items: center;
+}
+
+.categoria:hover {
+    transform: scale(1.03);
+}
+
+.descricao-titulo {
+    text-align: center;
+    margin-top: auto;
+}
+
+.topicos2 {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+    gap: 30px;
+    padding: 50px;
     border-radius: 10px;
     justify-content: center;
 }
@@ -104,26 +143,58 @@ main {
     background: white;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     padding: 15px;
-    border: 2px solid rgb(185, 185, 185);
+
+    border: 2px solid gray;
     border-radius: 10px;
-    width: 300px;
-    height: 440px;
-    text-align: center;
-    transition: 0.4s;
-    cursor: pointer;
+
+    width: 200px;
+    height: 340px;
+
+    text-align: left;
+
+    transition: 0.3s;
+}
+
+.produto:hover {
+    transform: scale(1.05);
 }
 
 .produto img {
     width: 100%;
-    align-items: center;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 5px;
 }
 
-.produto:hover {
-    transform: scale(1.03);
+.produto-texto {
+    margin-top: 10px;
 }
 
-.descricao-titulo {
-    text-align: center;
-    margin-top: auto;
+.produto-preco {
+    margin-top: 10px;
+}
+
+.preco-cortado {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.preco-parcelado {
+    font-size: 14px;
+}
+
+.produto-botao {
+    margin-top: 10px;
+}
+
+button {
+    background: #00aaff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
 }

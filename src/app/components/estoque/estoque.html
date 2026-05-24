@@ -16,6 +16,7 @@
         </select>
         <input [(ngModel)]="novoProduto.preco" type="number" placeholder="Preço">
         <input [(ngModel)]="novoProduto.quantidade" type="number" placeholder="Quantidade">
+        <input [(ngModel)]="novoProduto.quantidade" class="descricao" type="textarea" placeholder="Descrição">
         <input [(ngModel)]="novoProduto.imagem" placeholder="Nome do arquivo da imagem">
 
         <button class="btn-adicionar" (click)="adicionarProduto()">
@@ -46,13 +47,15 @@
           <td>{{ produto.quantidade }}</td>
           <td><img [src]="produto.imagem" width="80"></td>
           <td>-</td>
-          <td class="acoes">
-            <button class="btn-editar" (click)="editarProduto(produto)">
-                Editar
-            </button>
-            <button class="btn-excluir" (click)="excluirProduto(produto.id)">
-                Excluir
-            </button>
+          <td>
+            <div class="acoes">
+              <button class="btn-editar" (click)="editarProduto(produto)">
+                  Editar
+              </button>
+              <button class="btn-excluir" (click)="excluirProduto(produto.id)">
+                  Excluir
+              </button>
+            </div>
           </td>
         </tr>
       </tbody>

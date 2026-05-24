@@ -1,46 +1,49 @@
 <main>
   <h2 class="titulo">INDICAÇÕES DE SUPLEMENTOS</h2>
 
-  <section class="produtos">
+  <section class="topicos1">
 
-    <div class="produto">
+    <div class="categoria">
       <img src="images/creatina.jpg">
       <div class="descricao-titulo">
         <h3>Creatina</h3>
       </div>
     </div>
 
-    <div class="produto">
+    <div class="categoria">
       <img src="images/pré-treino.png">
       <div class="descricao-titulo">
         <h3>Pré-Treino</h3>
       </div>
     </div>
 
-    <div class="produto">
+    <div class="categoria">
       <img src="images/whey.jpg">
       <div class="descricao-titulo">
         <h3>Proteínas</h3>
       </div>
     </div>
 
-    <div class="produto">
+    <div class="categoria">
       <img src="images/vitaminas.jpg">
       <div class="descricao-titulo">
         <h3>Multi Vitaminas</h3>
       </div>
     </div>
 
-    <div class="produto">
+    <div class="categoria">
       <img src="images/ypro.jpg">
       <div class="descricao-titulo">
         <h3>Bebidas Proteicas</h3>
       </div>
     </div>
+  </section>
 
-    <section class="">
+  <h2 class="titulo"></h2>
 
-      <div class="" *ngFor="let produto of produtos">
+  <section class="topicos2">
+
+      <div class="produto" *ngFor="let produto of produtos">
         <img [src]="produto.imagem">
 
         <div class="produto-texto">
@@ -56,6 +59,4 @@
         </button>
       </div>
     </section>
-
-  </section>
 </main>

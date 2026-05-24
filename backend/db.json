@@ -53,6 +53,33 @@
       "imagem": "images/Camisa brasil 2.webp",
       "id": "UxCXMIsaP_I",
       "categoria": "camisa"
+    },
+    {
+      "codigo": "7",
+      "nome": "sdfsdfs",
+      "categoria": "Vôlei",
+      "preco": 4546,
+      "quantidade": 7575,
+      "imagem": "images/asd.jpg",
+      "id": "HNzWiNwMdEs"
+    },
+    {
+      "codigo": "8",
+      "nome": "ddqdaw",
+      "categoria": "camisa",
+      "preco": 45,
+      "quantidade": 5432,
+      "imagem": "images/creatina.jpg",
+      "id": "SDf7C45b760"
+    },
+    {
+      "codigo": "9",
+      "nome": "air force",
+      "categoria": "Tênis",
+      "preco": 750,
+      "quantidade": 100,
+      "imagem": "images/airforce1.jpg",
+      "id": "QT7zxzWlB38"
     }
   ],
   "usuarios": [

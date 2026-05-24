@@ -1,8 +1,7 @@
 <main>
     <h2 class="titulo">TÊNIS COM PLACA</h2>
-    <section class="produtos">
-
-        <div class="produto">
+    <section class="topicos1">
+        <div class="categoria">
             <img src="images/Fila Kr7 Pro Speed.jpg">
             <div class="descricao-titulo">
                 <h3>Mais Leveza</h3>
@@ -10,7 +9,7 @@
             <p class="descricao">A tecnologia das placas do tênis ajuda a melhorar a eficiencia da corrida, oermitindo
                 que o corredor gaste menos energia para percorrer a mesma distância.</p>
         </div>
-        <div class="produto">
+        <div class="categoria">
             <img src="images/New Balance Infinion 1080 V15.png">
             <div class="descricao-titulo">
                 <h3>Mais Velocidade</h3>
@@ -18,17 +17,18 @@
             <p class="descricao">A placa ajuda a transferir energia da corrida para frente, o que aumenta a propulsão e
                 o impulso para a próxima passada. Isso aumenta a velocidade do atleta.</p>
         </div>
-        <div class="produto">
+        <div class="categoria">
             <img src="images/newbalance.webp">
             <div class="descricao-titulo">
                 <h3>Mais Amortecimento</h3>
             </div>
             <p class="descricao">A placa combinada com espumas de alta tecnologia criam um excelente amortecimento,
                 ideal para corredores.</p>
-
-            <section class="">
-
-                <div class="" *ngFor="let produto of produtos">
+        </div>
+    </section>
+    <h2 class="titulo">TÊNIS COM PLACA</h2>
+    <section class="topicos2">
+                <div class="produto" *ngFor="let produto of produtos">
                     <img [src]="produto.imagem">
 
                     <div class="produto-texto">
@@ -43,7 +43,5 @@
                         Comprar
                     </button>
                 </div>
-            </section>
-        </div>
     </section>
 </main>

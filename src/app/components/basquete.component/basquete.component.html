@@ -1,34 +1,37 @@
     <main>
-        <h2 class="titulo"></h2>
-        <section class="produtos">
-            <div class="produto">
+        <h2 class="titulo">CATEGORIAS</h2>
+        <section class="topicos1">
+            <div class="categoria">
                 <img src="images/boladebasquete.jpg" style="margin-top: 20%;">
                 <div class="descricao-titulo">
                     <h3>Bolas de Basquete</h3>
                 </div>
             </div>
-            <div class="produto">
+            <div class="categoria">
                 <img src="images/tenisdebasquete.jpg" style="margin-top: 40%;">
                 <div class="descricao-titulo">
                     <h3>Tênis de Basquete</h3>
                 </div>
             </div>
-            <div class="produto">
+            <div class="categoria">
                 <img src="images/camisadebasquete.png" style="margin-top: 20%;">
                 <div class="descricao-titulo">
                     <h3>Camisas de Basquete</h3>
                 </div>
             </div>
-            <div class="produto">
+            <div class="categoria">
                 <img src="images/acessoriosdebasquete.jpg" style="margin-top: 45%;">
                 <div class="descricao-titulo">
                     <h3>Acessórios</h3>
                 </div>
             </div>
+        </section>
 
-            <section class="">
+        <h2 class="titulo">PRODUTOS</h2>
 
-            <div class="" *ngFor="let produto of produtos">
+        <section class="topicos2">
+
+            <div class="produto" *ngFor="let produto of produtos">
                 <img [src]="produto.imagem">
 
                 <div class="produto-texto">
@@ -45,6 +48,6 @@
             </div>
         </section>
         
-        </section>
+        
         <h2 class="titulo"></h2>
     </main>

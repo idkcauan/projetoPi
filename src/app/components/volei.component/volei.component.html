@@ -1,22 +1,20 @@
 <main>
     <h2 class="titulo">DESTAQUES DO VÔLEI</h2>
 
-    <section class="produtos">
+    <section class="topicos1">
 
-        <div class="produto">
+        <div class="categoria">
             <img src="images/bolavolei.webp">
-
             <div class="descricao-titulo">
                 <h3>Controle e Precisão</h3>
             </div>
-
             <p class="descricao">
                 As bolas profissionais de vôlei oferecem maior controle durante saques, levantamentos e ataques,
                 garantindo melhor desempenho dentro da quadra.
             </p>
         </div>
 
-        <div class="produto">
+        <div class="categoria">
             <img src="images/tenisvolei.jpg">
 
             <div class="descricao-titulo">
@@ -29,7 +27,7 @@
             </p>
         </div>
 
-        <div class="produto">
+        <div class="categoria">
             <img src="images/joelheiravolei.jpg">
 
             <div class="descricao-titulo">
@@ -41,24 +39,26 @@
                 reduzindo o risco de lesões.
             </p>
         </div>
+    </section>
 
-        <section class="">
+    <h2 class="titulo"></h2>
 
-            <div class="" *ngFor="let produto of produtos">
-                <img [src]="produto.imagem">
+    <section class="topicos2">
 
-                <div class="produto-texto">
-                    <h3>{{ produto.nome }}</h3>
-                </div>
+        <div class="produto" *ngFor="let produto of produtos">
+            <img [src]="produto.imagem">
 
-                <div class="produto-preco">
-                    <p><b>{{ produto.preco | currency:'BRL':'symbol':'1.2-2'}}</b></p>
-                </div>
-
-                <button [routerLink]="['/produto', produto.id]">
-                    Comprar
-                </button>
+            <div class="produto-texto">
+                <h3>{{ produto.nome }}</h3>
             </div>
-        </section>
+
+            <div class="produto-preco">
+                <p><b>{{ produto.preco | currency:'BRL':'symbol':'1.2-2'}}</b></p>
+            </div>
+
+            <button [routerLink]="['/produto', produto.id]">
+                Comprar
+            </button>
+        </div>
     </section>
 </main>

@@ -32,10 +32,49 @@ body {
     text-align: center;
 }
 
-.produtos {
+.topicos1 {
     display: flex;
-    gap: 20px;
-    padding: 20px;
+    width: 100%;
+    gap: 100px;
+    padding: 30px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.categoria {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border: 2px solid rgb(185, 185, 185);
+    border-radius: 10px;
+    width: 270px;
+    height: 400px;
+    text-align: center;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.categoria img {
+    width: 100%;
+    align-items: center;
+}
+
+.categoria:hover {
+    transform: scale(1.03);
+}
+
+.descricao-titulo {
+    text-align: center;
+    margin-top: auto;
+}
+
+.topicos2 {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+    gap: 30px;
+    padding: 50px;
     border-radius: 10px;
     justify-content: center;
 }
@@ -44,29 +83,37 @@ body {
     background: white;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     padding: 15px;
+
     border: 2px solid gray;
     border-radius: 10px;
-    width: 400px;
-    height: 540px;
+
+    width: 200px;
+    height: 340px;
+
     text-align: left;
+
     transition: 0.3s;
-    cursor: pointer;
+}
+
+.produto:hover {
+    transform: scale(1.05);
 }
 
 .produto img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 5px;
 }
 
-.descricao-titulo {
-    margin-top: 15px;
-}
-
-.descricao {
+.produto-texto {
     margin-top: 10px;
-    flex-grow: 1; /* 🔥 isso resolve tudo */
+}
+
+.produto-preco {
+    margin-top: 10px;
 }
 
 .preco-cortado {
@@ -79,25 +126,15 @@ body {
 }
 
 .produto-botao {
-    margin-top: 10%;
+    margin-top: 10px;
 }
 
-.produto:hover {
-    transform: scale(1.05);
-}
-
-.produto img {
-    width: 100%;
-}
-
-footer {
-    background: #7e0000;
-    text-align: center;
-    text-decoration: none;
-    padding: 15px;
-}
-
-.footer a {
-    text-decoration: none;
+button {
+    background: #00aaff;
     color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
 }

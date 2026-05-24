@@ -1,48 +1,49 @@
 <main>
     <h2 class="titulo">CALÇADOS</h2>
-    <section class="produtos">
-        <div class="produto">
+    <section class="topicos1">
+        <div class="categoria">
             <img src="images/tenis-masculino.png">
             <div class="descricao-titulo">
                 <h3>Masculino</h3>
             </div>
         </div>
-        <div class="produto">
+        <div class="categoria">
             <img src="images/tenis-feminino.png">
             <div class="descricao-titulo">
                 <h3>Feminino</h3>
             </div>
         </div>
-        <div class="produto">
+        <div class="categoria">
             <img src="images/tenis-infantil.png">
             <div class="descricao-titulo">
                 <h3>Infantil</h3>
             </div>
         </div>
-        <div class="produto">
+        <div class="categoria">
             <img src="images/tenis-sneakers.png">
             <div class="descricao-titulo">
                 <h3>Sneakers</h3>
             </div>
         </div>
+    </section>
 
-        <section class="">
+    <h2 class="titulo"></h2>
 
-            <div class="" *ngFor="let produto of produtos">
-                <img [src]="produto.imagem">
+    <section class="topicos2">
+        <div class="produto" *ngFor="let produto of produtos">
+            <img [src]="produto.imagem">
 
-                <div class="produto-texto">
-                    <h3>{{ produto.nome }}</h3>
-                </div>
-
-                <div class="produto-preco">
-                    <p><b>{{ produto.preco | currency:'BRL':'symbol':'1.2-2'}}</b></p>
-                </div>
-
-                <button [routerLink]="['/produto', produto.id]">
-                    Comprar
-                </button>
+            <div class="produto-texto">
+                <h3>{{ produto.nome }}</h3>
             </div>
-        </section>
+
+            <div class="produto-preco">
+                <p><b>{{ produto.preco | currency:'BRL':'symbol':'1.2-2'}}</b></p>
+            </div>
+
+            <button [routerLink]="['/produto', produto.id]">
+                Comprar
+            </button>
+        </div>
     </section>
 </main>

@@ -65,20 +65,20 @@ main {
 }
 
 .produtos {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+    gap: 30px;
+    padding: 50px;
     border-radius: 10px;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .produto {
     background: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-
+    justify-content: space-around;
     padding: 15px;
 
     border: 2px solid gray;
@@ -132,15 +132,4 @@ button {
     margin-top: 10px;
     cursor: pointer;
     border-radius: 5px;
-}
-
-footer {
-    background: #7e0000;
-    text-align: center;
-    padding: 15px;
-}
-
-.footer a {
-    text-decoration: none;
-    color: white;
 }
