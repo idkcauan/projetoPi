@@ -6,6 +6,7 @@
       "categoria": "Tênis",
       "preco": 759.9,
       "quantidade": 100,
+      "descricao": "Tênis clássico da Nike com design urbano, confortável e perfeito para o dia a dia.",
       "imagem": "images/airforce1.jpg",
       "id": "OQjJ-2qpRj0"
     },
@@ -15,71 +16,119 @@
       "categoria": "Tênis",
       "preco": 759.9,
       "quantidade": 100,
+      "descricao": "Modelo moderno com amortecimento Air Max, ideal para conforto e estilo casual.",
       "imagem": "images/airmax.jpg",
       "id": "7RImsYFT8Qg"
     },
     {
       "codigo": "3",
-      "nome": "Tênis Nike",
+      "nome": "Tênis Nike Dunk Low",
       "categoria": "Tênis",
-      "preco": 343,
-      "quantidade": 22,
+      "preco": 850,
+      "quantidade": 100,
+      "descricao": "Tênis Nike Dunk Low com visual icônico e confortável para qualquer ocasião.",
       "imagem": "images/asd.jpg",
       "id": "dAO4fqaDREg"
     },
     {
       "codigo": "4",
       "nome": "Camisa da Seleção Brasileira",
-      "categoria": "Camisa",
+      "categoria": "Roupas",
       "preco": 350,
       "quantidade": 10,
+      "descricao": "Camisa oficial da Seleção Brasileira com tecido leve e confortável para torcer.",
       "imagem": "images/camisa-brasil.png",
       "id": "ZKoV_NdT9K8"
     },
     {
       "codigo": "5",
       "nome": "Camisa Dry Fit McLaren",
-      "categoria": "Camisa",
+      "categoria": "Roupas",
       "preco": 300,
       "quantidade": 10,
+      "descricao": "Camisa Dry Fit da McLaren com tecido respirável e estilo esportivo moderno.",
       "imagem": "images/camisadryfit.jpg",
       "id": "XF6RffZubbU"
     },
     {
       "codigo": "6",
       "nome": "Camisa seleção brasileira 2",
+      "categoria": "Roupas",
       "preco": 350,
       "quantidade": 100,
+      "descricao": "Segunda camisa da Seleção Brasileira com design moderno e ótimo conforto.",
       "imagem": "images/Camisa brasil 2.webp",
-      "id": "UxCXMIsaP_I",
-      "categoria": "camisa"
+      "id": "UxCXMIsaP_I"
     },
     {
       "codigo": "7",
-      "nome": "sdfsdfs",
-      "categoria": "Vôlei",
-      "preco": 4546,
-      "quantidade": 7575,
-      "imagem": "images/asd.jpg",
-      "id": "HNzWiNwMdEs"
+      "nome": "Nike Phantom 6",
+      "categoria": "Tênis",
+      "preco": 600,
+      "quantidade": 100,
+      "descricao": "Chuteira Nike Phantom 6 com ótimo controle de bola e conforto em campo.",
+      "imagem": "images/Nike phantom 6.png",
+      "id": "1_IMmYkzr-8"
     },
     {
       "codigo": "8",
-      "nome": "ddqdaw",
-      "categoria": "camisa",
-      "preco": 45,
-      "quantidade": 5432,
-      "imagem": "images/creatina.jpg",
-      "id": "SDf7C45b760"
+      "nome": "Asics Magic Speed 4",
+      "categoria": "Corrida",
+      "preco": 900,
+      "quantidade": 50,
+      "descricao": "O Asics Magic Speed 4 oferece alta performance, leveza e excelente resposta, sendo ideal para corridas e treinos intensos.",
+      "imagem": "images/Asics Magic Speed 4.png",
+      "id": "vlavfFnCn8g"
     },
     {
       "codigo": "9",
-      "nome": "air force",
-      "categoria": "Tênis",
-      "preco": 750,
+      "nome": "Bola de vôlei Penalty",
+      "categoria": "Vôlei",
+      "preco": 150,
+      "quantidade": 175,
+      "imagem": "images/bolavolei.webp",
+      "descricao": "A Bola de Vôlei Penalty oferece ótima durabilidade, toque macio e excelente controle para partidas e treinos.",
+      "id": "78qT1gpTy8o"
+    },
+    {
+      "codigo": "10",
+      "nome": "Pré-treino Diabo Verde 300g",
+      "categoria": "Suplemento",
+      "preco": 70.99,
+      "quantidade": 90,
+      "descricao": "O Pré-Treino Diabo Verde 300g foi desenvolvido para aumentar a energia, o foco e a disposição durante os treinos mais intensos. Sua fórmula auxilia no desempenho físico e na concentração, ajudando a melhorar a resistência e a manter a intensidade dos exercícios por mais tempo.",
+      "imagem": "images/pré-treino.png",
+      "id": "oYnjZKAqu9k"
+    },
+    {
+      "codigo": "11",
+      "nome": "Camisa I Espanha 2026 ",
+      "categoria": "Roupas",
+      "preco": 350.99,
       "quantidade": 100,
-      "imagem": "images/airforce1.jpg",
-      "id": "QT7zxzWlB38"
+      "descricao": "A Camisa I Espanha 2026 combina design moderno, conforto e qualidade para os fãs da seleção espanhola. Produzida com tecido leve e respirável, ela oferece ótimo caimento e liberdade de movimento, sendo ideal para usar em jogos, treinos ou no dia a dia demonstrando sua paixão pelo futebol.",
+      "imagem": "images/camisa-espanha.png",
+      "id": "GCjPLx6C5Wc"
+    },
+    {
+      "codigo": "12",
+      "nome": "Bola de basquete Wilson",
+      "categoria": "Basquete",
+      "preco": 140.5,
+      "quantidade": 200,
+      "descricao": "A Bola de Basquete Wilson oferece excelente aderência, controle e durabilidade para partidas e treinos. Produzida com materiais resistentes e acabamento de alta qualidade, ela proporciona ótimo desempenho dentro das quadras, garantindo conforto no manuseio e maior precisão nos arremessos e passes.",
+      "imagem": "images/Bola de basquete wilsom.webp",
+      "id": "AM_JcttliuU"
+    },
+    {
+      "codigo": "13",
+      "nome": "Camisa I França 2026",
+      "categoria": "Roupas",
+      "preco": 350,
+      "quantidade": 78,
+      "descricao": "A Camisa I França 2026 traz um visual moderno e elegante inspirado na tradição da seleção francesa. Produzida com tecido leve e respirável, ela oferece conforto e ótimo caimento para o dia a dia, jogos ou treinos, permitindo demonstrar sua paixão pelo futebol com muito estilo.",
+      "imagem": "images/camisa-frança.jpg",
+      "id": "G0a4rfx0mLg"
     }
   ],
   "usuarios": [

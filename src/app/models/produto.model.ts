@@ -6,4 +6,5 @@ export interface Produto{
     categoria:string;
     imagem:string|null;
     codigo:number;
+    descricao:string|null;
 }

@@ -8,18 +8,14 @@
                     <span>1000 avaliações</span>
                 </div>
             </div>
-            <div class="detalhes">
+            <div class="detalhes" *ngIf="produto">
                 <p><strong>Marca:</strong> Marca</p>
                 <p><strong>Indicado para:</strong> Treinar</p>
                 <p><strong>Material:</strong> Têxtil e Sintético</p>
                 <p><strong>Peso do Produto:</strong> 352g</p>
                 <p><strong>Definição da Tecnologia:</strong> Espuma macia que amortece o impacto.</p>
                 <p><strong>Garantia do Fabricante:</strong> Contra defeito de fabricação</p>
-                <p><strong>Descrição:</strong> O Mizuno Wave Pro é um tênis desenvolvido para
-                    oferecer conforto, estabilidade e alto desempenho dentro das quadras. Com
-                    design moderno e solado antiderrapante, proporciona maior segurança nos movimentos
-                    rápidos, saltos e mudanças de direção durante as partidas. Seu material leve e respirável
-                    garante mais conforto mesmo em jogos intensos.</p>
+                <p><strong>Descrição:</strong> {{produto.descricao}}</p>
             </div>
         </div>
         <div class="fotos">

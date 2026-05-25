@@ -1,37 +1,12 @@
     <main>
-        <h2 class="titulo">CATEGORIAS</h2>
-        <section class="topicos1">
-            <div class="categoria">
-                <img src="images/boladebasquete.jpg" style="margin-top: 20%;">
-                <div class="descricao-titulo">
-                    <h3>Bolas de Basquete</h3>
-                </div>
-            </div>
-            <div class="categoria">
-                <img src="images/tenisdebasquete.jpg" style="margin-top: 40%;">
-                <div class="descricao-titulo">
-                    <h3>Tênis de Basquete</h3>
-                </div>
-            </div>
-            <div class="categoria">
-                <img src="images/camisadebasquete.png" style="margin-top: 20%;">
-                <div class="descricao-titulo">
-                    <h3>Camisas de Basquete</h3>
-                </div>
-            </div>
-            <div class="categoria">
-                <img src="images/acessoriosdebasquete.jpg" style="margin-top: 45%;">
-                <div class="descricao-titulo">
-                    <h3>Acessórios</h3>
-                </div>
-            </div>
-        </section>
-
-        <h2 class="titulo">PRODUTOS</h2>
+       
+        <h2 class="titulo">PRODUTOS - BASQUETE</h2>
 
         <section class="topicos2">
 
-            <div class="produto" *ngFor="let produto of produtos">
+            @for (produto of produtos; track produto.codigo){
+            @if (produto.categoria == "Basquete"){
+            <div class="produto">
                 <img [src]="produto.imagem">
 
                 <div class="produto-texto">
@@ -46,7 +21,10 @@
                     Comprar
                 </button>
             </div>
+        }
+        }
         </section>
+        
         
         
         <h2 class="titulo"></h2>

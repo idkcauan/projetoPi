@@ -1,36 +1,11 @@
 <main>
-    <h2 class="titulo">CALÇADOS</h2>
-    <section class="topicos1">
-        <div class="categoria">
-            <img src="images/tenis-masculino.png">
-            <div class="descricao-titulo">
-                <h3>Masculino</h3>
-            </div>
-        </div>
-        <div class="categoria">
-            <img src="images/tenis-feminino.png">
-            <div class="descricao-titulo">
-                <h3>Feminino</h3>
-            </div>
-        </div>
-        <div class="categoria">
-            <img src="images/tenis-infantil.png">
-            <div class="descricao-titulo">
-                <h3>Infantil</h3>
-            </div>
-        </div>
-        <div class="categoria">
-            <img src="images/tenis-sneakers.png">
-            <div class="descricao-titulo">
-                <h3>Sneakers</h3>
-            </div>
-        </div>
-    </section>
-
-    <h2 class="titulo"></h2>
+    
+    <h2 class="titulo">PRODUTOS - CALÇADOS</h2>
 
     <section class="topicos2">
-        <div class="produto" *ngFor="let produto of produtos">
+        @for (produto of produtos; track produto.codigo){
+        @if (produto.categoria == "Tênis"){
+        <div class="produto">
             <img [src]="produto.imagem">
 
             <div class="produto-texto">
@@ -45,5 +20,7 @@
                 Comprar
             </button>
         </div>
+    }
+    }
     </section>
 </main>

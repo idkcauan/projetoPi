@@ -1,53 +1,10 @@
 <main>
-
-    <h2 class="titulo">ROUPAS ESPORTIVAS</h2>
-
-    <section class="topicos1">
-
-        <div class="categoria">
-            <img src="images/camisadryfit.jpg">
-
-            <div class="descricao-titulo">
-                <h3>Camisas Dry Fit</h3>
-            </div>
-
-            <p class="descricao">
-                Camisas leves e respiráveis que ajudam na evaporação do suor,
-                proporcionando conforto durante treinos e atividades físicas.
-            </p>
-        </div>
-
-        <div class="categoria">
-            <img src="images/shortsesportivos.webp">
-
-            <div class="descricao-titulo">
-                <h3>Shorts Esportivos</h3>
-            </div>
-
-            <p class="descricao">
-                Shorts desenvolvidos para oferecer liberdade de movimento,
-                elasticidade e máximo desempenho em qualquer esporte.
-            </p>
-        </div>
-
-        <div class="categoria">
-            <img src="images/moletompremium.webp">
-
-            <div class="descricao-titulo">
-                <h3>Moletons Premium</h3>
-            </div>
-
-            <p class="descricao">
-                Ideal para dias frios e pós-treino, os moletons esportivos unem
-                conforto, estilo e proteção térmica.
-            </p>
-        </div>
-    </section>
-
-    <h2 class="titulo"></h2>
+    <h2 class="titulo">PRODUTOS - ROUPAS</h2>
 
     <section class="topicos2">
-        <div class="produto" *ngFor="let produto of produtos">
+        @for (produto of produtos;track produto.codigo){
+        @if (produto.categoria == "Roupas"){
+        <div class="produto">
             <img [src]="produto.imagem">
 
             <div class="produto-texto">
@@ -62,6 +19,8 @@
                 Comprar
             </button>
         </div>
+    }
+    }
     </section>
 
 </main>

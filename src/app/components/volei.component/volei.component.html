@@ -1,51 +1,11 @@
 <main>
-    <h2 class="titulo">DESTAQUES DO VÔLEI</h2>
-
-    <section class="topicos1">
-
-        <div class="categoria">
-            <img src="images/bolavolei.webp">
-            <div class="descricao-titulo">
-                <h3>Controle e Precisão</h3>
-            </div>
-            <p class="descricao">
-                As bolas profissionais de vôlei oferecem maior controle durante saques, levantamentos e ataques,
-                garantindo melhor desempenho dentro da quadra.
-            </p>
-        </div>
-
-        <div class="categoria">
-            <img src="images/tenisvolei.jpg">
-
-            <div class="descricao-titulo">
-                <h3>Mais Estabilidade</h3>
-            </div>
-
-            <p class="descricao">
-                Os tênis específicos para vôlei possuem amortecimento e suporte lateral, ajudando na impulsão,
-                aterrissagem e movimentação rápida durante as jogadas.
-            </p>
-        </div>
-
-        <div class="categoria">
-            <img src="images/joelheiravolei.jpg">
-
-            <div class="descricao-titulo">
-                <h3>Proteção nas Defesas</h3>
-            </div>
-
-            <p class="descricao">
-                As joelheiras absorvem impactos e aumentam a segurança do atleta em mergulhos e movimentos defensivos,
-                reduzindo o risco de lesões.
-            </p>
-        </div>
-    </section>
-
-    <h2 class="titulo"></h2>
+    <h2 class="titulo">PRODUTOS - VÔLEI</h2>
 
     <section class="topicos2">
-
-        <div class="produto" *ngFor="let produto of produtos">
+        
+        @for (produto of produtos;track produto.codigo){
+        @if (produto.categoria == "Vôlei"){
+        <div class="produto">
             <img [src]="produto.imagem">
 
             <div class="produto-texto">
@@ -60,5 +20,7 @@
                 Comprar
             </button>
         </div>
+    }
+    }
     </section>
 </main>

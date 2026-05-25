@@ -19,7 +19,7 @@ export class Estoque implements OnInit {
   novoProduto: Produto = {} as Produto;
   produtoEditando?: Produto;
 
-  categorias = ['Tênis', 'camisa', 'Vôlei', 'Basquete', 'Suplemento', 'Acessórios'];
+  categorias = ['Tênis', 'Roupas', 'Vôlei', 'Basquete', 'Suplemento', 'Corrida'];
 
   constructor(private produtoService: ProdutoService, private router: Router, private cd:ChangeDetectorRef) {}
 
@@ -38,7 +38,8 @@ export class Estoque implements OnInit {
       preco: 0,
       quantidade: 0,
       imagem: "images/",
-      codigo: 0
+      codigo: 0,
+      descricao: ""
     };
   }
 
@@ -49,7 +50,13 @@ export class Estoque implements OnInit {
   }
 
   adicionarProduto() {
-    this.produtoService.adicionar(this.novoProduto).subscribe(() => {
+
+    const produto = {
+      ...this.novoProduto,
+      imagem:`images/${this.novoProduto.imagem}` 
+    };
+
+    this.produtoService.adicionar(produto).subscribe(() => {
       this.novoProduto = {} as Produto;
       window.location.reload();
     });
